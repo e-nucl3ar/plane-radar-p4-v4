@@ -1,0 +1,25 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "display.c"
+        "radar_display.c"
+        "adsb_client.c"
+        "wifi_setup.c"
+        "radar_location.c"
+        "status_screens.c"
+    INCLUDE_DIRS
+        "."
+        "../components/radar_ui"
+    REQUIRES
+        nvs_flash
+        esp_wifi
+        esp_http_client
+        esp_netif
+        esp_timer
+        freertos
+        driver
+        log
+        lvgl
+        esp_ldo_regulator
+        esp_lcd_mipi_dsi
+)
